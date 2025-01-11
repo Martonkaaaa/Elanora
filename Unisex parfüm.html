@@ -86,9 +86,78 @@
         <p>Ez a kombináció friss, természetes, és dinamikus illatot biztosít, amely a férfiasságot és az erőt sugározza.</p>
     </main>
 
-    <footer>
-        <p>&copy; Elanora UNISEX Aromák</p>
-    </footer>
-
+    <div class="payment-container">
+        <h2>Fizetés</h2>
+        <form action="/process-payment" method="POST">
+            <div class="form-group">
+                <label for="card-name">Kártyatulajdonos neve</label>
+                <input type="text" id="card-name" name="card_name" placeholder="Teljes név" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Kártyaszám</label>
+                <input type="text" id="card-number" name="card_number" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Lejárati dátum</label>
+                <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" required>
+            </div>
+            <button type="submit">Fizetés</button>
+        </form>
+    </div>
+    
+    <style>
+        .payment-container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .payment-container h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus {
+            border-color: #ad9717;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ad9717;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ad9717;
+        }
+     
+    </style>
+    
 </body>
 </html>
